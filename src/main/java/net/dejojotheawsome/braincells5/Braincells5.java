@@ -7,15 +7,12 @@ import net.dejojotheawsome.braincells5.block.ModBlocks;
 import net.dejojotheawsome.braincells5.block.ModKineticBlocks;
 import net.dejojotheawsome.braincells5.item.ModCreativeModeTabs;
 import net.dejojotheawsome.braincells5.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -28,13 +25,15 @@ public class Braincells5
     public static final String MOD_ID = "braincells5";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(Braincells5.MOD_ID);
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID);
 
     public Braincells5()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
+
+        REGISTRATE.registerEventListeners(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

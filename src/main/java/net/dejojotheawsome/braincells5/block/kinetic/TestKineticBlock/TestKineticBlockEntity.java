@@ -38,4 +38,12 @@ public class TestKineticBlockEntity extends GeneratingKineticBlockEntity {
     public float getGeneratedSpeed() {
         return convertToDirection((float)generatedSpeed, (Direction)this.getBlockState().getValue(TestKineticBlock.FACING));
     }
+
+    public void setGeneratedSpeed(int generatedSpeed) {
+        if (generatedSpeed <= 32)
+        {
+            this.generatedSpeed = generatedSpeed;
+            this.updateGeneratedRotation();
+        }
+    }
 }

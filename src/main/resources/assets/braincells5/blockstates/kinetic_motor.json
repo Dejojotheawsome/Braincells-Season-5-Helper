@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "braincells5:block/test_kinetic_block/block_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "braincells5:block/test_kinetic_block/block",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "braincells5:block/test_kinetic_block/block",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "braincells5:block/test_kinetic_block/block"
+    },
+    "facing=up": {
+      "model": "braincells5:block/test_kinetic_block/block_vertical"
+    },
+    "facing=west": {
+      "model": "braincells5:block/test_kinetic_block/block",
+      "y": 90
+    }
+  }
+}
