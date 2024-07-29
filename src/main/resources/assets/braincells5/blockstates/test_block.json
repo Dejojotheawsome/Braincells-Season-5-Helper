@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "braincells5:block/test_block"
+    }
+  }
+}
